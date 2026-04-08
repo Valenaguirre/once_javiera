@@ -1,0 +1,261 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', sans-serif;
+  background: #fafafa;
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.tarjeta {
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  width: 100%;
+  max-width: 350px;
+  overflow: hidden;
+  
+  display: flex;
+  flex-direction: column;
+  transition: box-shadow 0.3s ease;
+  animation: slideUp 0.5s ease-out;
+}
+
+.tarjeta:hover {
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+.perfil-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 16px;
+  padding: 24px 20px;
+  background: linear-gradient(135deg, #FFE5F0 0%, #E5F3FF 100%);
+  color: #2c3e50;
+}
+
+.perfil-header img {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: 3px solid white;
+  object-fit: cover;
+  background-color: #fff3f8;
+  flex-shrink: 0;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.info h2 {
+  font-size: 1.3rem;
+  margin: 0;
+  color: #2c3e50;
+  font-weight: 600;
+}
+
+.info span {
+  font-size: 0.85rem;
+  color: #5b6566;
+}
+
+.bio {
+  padding: 18px 20px;
+  text-align: center;
+  color: #555;
+  font-size: 0.93rem;
+  line-height: 1.5;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.estadisticas {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 18px 20px;
+  background: #fff5fb;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  text-align: center;
+}
+
+.stat h3 {
+  font-size: 1.4rem;
+  color: #d4949e;
+  margin: 0;
+  font-weight: 700;
+}
+
+.stat p {
+  font-size: 0.8rem;
+  color: #999;
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: 500;
+}
+
+.botones {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  padding: 16px 20px;
+  justify-content: center;
+}
+
+.seguir,
+.mensaje {
+  flex: 1;
+  padding: 11px 16px;
+  border: none;
+  border-radius: 12px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-size: 0.9rem;
+}
+
+.seguir {
+  background: linear-gradient(135deg, #FFB3D9 0%, #E8B4F3 100%);
+  color: white;
+  box-shadow: 0 4px 12px rgba(255, 179, 217, 0.3);
+}
+
+.seguir:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(255, 179, 217, 0.4);
+}
+
+.seguir:active {
+  transform: translateY(0);
+}
+
+.mensaje {
+  background: #E8F3FF;
+  color: #5A9FD4;
+  border: 1.5px solid #C5E1FF;
+}
+
+.mensaje:hover {
+  background: #D4E9FF;
+  transform: translateY(-2px);
+}
+
+.mensaje:active {
+  transform: translateY(0);
+}
+
+.miniaturas {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 20px;
+  justify-content: center;
+  background: #fffbfe;
+}
+
+.miniaturas img {
+  width: 110px;
+  height: 110px;
+  border-radius: 14px;
+  flex-shrink: 0;
+  object-fit: cover;
+  background: linear-gradient(135deg, #F0E5FF 0%, #FFE5F0 100%);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  cursor: pointer;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+}
+
+.miniaturas img:hover {
+  transform: scale(1.08) translateY(-3px);
+  box-shadow: 0 6px 18px rgba(212, 148, 158, 0.25);
+}
+
+
+@media (max-width: 600px) {
+  .tarjeta {
+    max-width: 100%;
+    border-radius: 16px;
+  }
+  
+  .perfil-header {
+    padding: 18px 16px;
+    gap: 12px;
+  }
+  
+  .perfil-header img {
+    width: 60px;
+    height: 60px;
+  }
+  
+  .info h2 {
+    font-size: 1.2rem;
+  }
+  
+  .bio {
+    padding: 14px;
+    font-size: 0.88rem;
+  }
+  
+  .estadisticas {
+    padding: 14px;
+  }
+  
+  .stat h3 {
+    font-size: 1.2rem;
+  }
+  
+  .botones {
+    gap: 8px;
+    padding: 14px;
+  }
+  
+  .seguir, .mensaje {
+    padding: 10px 14px;
+    font-size: 0.85rem;
+  }
+  
+  .miniaturas {
+    gap: 6px;
+    padding: 16px;
+  }
+  
+  .miniaturas img {
+    width: 95px;
+    height: 95px;
+  }
+}

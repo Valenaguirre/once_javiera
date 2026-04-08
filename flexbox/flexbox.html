@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tarjeta de Perfil</title>
+
+  <!-- Conexión al CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- BODY usa Flexbox para centrado perfecto: justify-content + align-items -->
+
+  <div class="tarjeta">
+    <!-- TARJETA usa flex-direction: column para apilamiento vertical -->
+
+    <div class="perfil-header">
+      <!-- PERFIL-HEADER: flex-direction ROW, gap, align-items CENTER -->
+      <img src="https://picsum.photos/seed/valentina/80/80" alt="avatar de Valentina">
+      <div class="info">
+        <h2>Valen Aguirre</h2>
+        <span>@val_amz</span>
+      </div>
+    </div>
+
+    <p class="bio">
+         Holiiii mucho gusto soy Valentina Gómez una estudiante de la institucion Javiera londoño y la media tecnica Desarrollo de software
+    </p>
+
+    <div class="estadisticas">
+      <div class="stat">
+        <h3>5</h3>
+        <p>Proyectos</p>
+      </div>
+      <div class="stat">
+        <h3>569</h3>
+        <p>Seguidores</p>
+      </div>
+      <div class="stat">
+        <h3>130</h3>
+        <p>Siguiendo</p>
+      </div>
+    </div>
+
+    <div class="botones">
+      <button class="seguir">Seguir</button>
+      <button class="mensaje">Mensaje</button>
+    </div>
+
+    <div class="miniaturas">
+      <img src="https://picsum.photos/seed/proyecto1/120/120" alt="proyecto 1">
+      <img src="https://picsum.photos/seed/proyecto2/120/120" alt="proyecto 2">
+      <img src="https://picsum.photos/seed/proyecto3/120/120" alt="proyecto 3">
+    </div>
+
+  </div>
+
+</body>
+
+</html>
